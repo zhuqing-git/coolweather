@@ -1,4 +1,4 @@
-package com.coolweather.android;
+package com.coolweather.zhuqing;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -11,7 +11,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -24,13 +23,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.coolweather.android.gson.Forecast;
-import com.coolweather.android.gson.Weather;
-import com.coolweather.android.service.AutoUpdateService;
-import com.coolweather.android.util.HtttpUtil;
-import com.coolweather.android.util.Utility;
-
-import org.w3c.dom.Text;
+import com.coolweather.zhuqing.gson.Forecast;
+import com.coolweather.zhuqing.gson.Weather;
+import com.coolweather.zhuqing.service.AutoUpdateService;
+import com.coolweather.zhuqing.util.HtttpUtil;
+import com.coolweather.zhuqing.util.Utility;
 
 import java.io.IOException;
 

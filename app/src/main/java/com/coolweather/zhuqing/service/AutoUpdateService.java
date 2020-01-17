@@ -1,4 +1,4 @@
-package com.coolweather.android.service;
+package com.coolweather.zhuqing.service;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -9,10 +9,9 @@ import android.os.IBinder;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
 
-import com.coolweather.android.WeatherActivity;
-import com.coolweather.android.gson.Weather;
-import com.coolweather.android.util.HtttpUtil;
-import com.coolweather.android.util.Utility;
+import com.coolweather.zhuqing.gson.Weather;
+import com.coolweather.zhuqing.util.HtttpUtil;
+import com.coolweather.zhuqing.util.Utility;
 
 import java.io.IOException;
 

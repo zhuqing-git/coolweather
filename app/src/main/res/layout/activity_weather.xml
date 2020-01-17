@@ -63,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:name="com.coolweather.android.ChooseAreaFragment"
+            android:name="com.coolweather.zhuqing.ChooseAreaFragment"
             android:id="@+id/choose_area_fragment"/>
 
     </androidx.drawerlayout.widget.DrawerLayout>

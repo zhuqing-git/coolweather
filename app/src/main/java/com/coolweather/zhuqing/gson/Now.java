@@ -1,4 +1,4 @@
-package com.coolweather.android.gson;
+package com.coolweather.zhuqing.gson;
 
 import com.google.gson.annotations.SerializedName;
 

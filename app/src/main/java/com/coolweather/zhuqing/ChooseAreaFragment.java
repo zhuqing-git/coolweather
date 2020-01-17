@@ -1,17 +1,17 @@
-package com.coolweather.android;
+package com.coolweather.zhuqing;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,18 +19,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.coolweather.android.db.City;
-import com.coolweather.android.db.County;
-import com.coolweather.android.db.Province;
+import com.coolweather.zhuqing.db.City;
+import com.coolweather.zhuqing.db.County;
+import com.coolweather.zhuqing.db.Province;
 
 import org.litepal.crud.DataSupport;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.List;
-import com.coolweather.android.util.HtttpUtil;
-import com.coolweather.android.util.Utility;
+import com.coolweather.zhuqing.util.HtttpUtil;
+import com.coolweather.zhuqing.util.Utility;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -40,7 +39,7 @@ public class ChooseAreaFragment extends Fragment {
     public static final int LEVEL_PROVINCE=0;
     public static final int LEVEL_CITY=1;
     public static final int LEVEL_COUNTY=2;
-    private ProgressDialog progressDialog;
+    private ProgressBar progressDialog;
     private TextView titleText;
     private Button backButton;
     private ListView listView;
@@ -255,18 +254,20 @@ public class ChooseAreaFragment extends Fragment {
 
     //<editor-fold desc="ProgressDialog的显示和关闭">
     private void closeProgressDialog() {
-        if(progressDialog!=null)
-            progressDialog.dismiss();
+        if(progressDialog!=null) {
+            progressDialog.setVisibility(View.GONE);
+        }
     }
 
     private void showProgressDialog() {
         if(progressDialog==null)
         {
-            progressDialog=new ProgressDialog(getContext());
-            progressDialog.setMessage("正在加载...");
-            progressDialog.setCanceledOnTouchOutside(false);
+            progressDialog=new ProgressBar(getContext());
+            //progressDialog.setMessage("正在加载...");
+            //progressDialog.setCanceledOnTouchOutside(false);
+           // progressDialog.setVisibility(View.VISIBLE);
         }
-        progressDialog.show();
+        progressDialog.setVisibility(View.VISIBLE);
     }
     //</editor-fold>
 }

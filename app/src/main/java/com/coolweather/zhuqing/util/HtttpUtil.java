@@ -1,8 +1,7 @@
-package com.coolweather.android.util;
+package com.coolweather.zhuqing.util;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
 
 public class HtttpUtil {
     public static void sendOkHttpRequest(String address,okhttp3.Callback callback){

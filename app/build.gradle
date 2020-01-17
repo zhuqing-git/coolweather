@@ -1,6 +1,25 @@
 apply plugin: 'com.android.application'
 
 android {
+
+
+    allprojects {
+        gradle.projectsEvaluated {
+            tasks.withType(JavaCompile) {
+                options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+            }
+        }
+    }
+
+
+    signingConfigs {
+        config {
+            storeFile file('C:\\Users\\zhuqing\\Desktop\\as\\zhuqing.jks')
+            storePassword '000000'
+            keyAlias = 'zhuqingdev'
+            keyPassword '000000'
+        }
+    }
     compileSdkVersion 28
     buildToolsVersion "29.0.2"
     defaultConfig {
@@ -11,8 +30,10 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
+            signingConfig signingConfigs.config
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

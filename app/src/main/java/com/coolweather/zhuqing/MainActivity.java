@@ -1,4 +1,4 @@
-package com.coolweather.android;
+package com.coolweather.zhuqing;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-
-import com.coolweather.android.gson.Weather;
 
 public class MainActivity extends AppCompatActivity {
 
